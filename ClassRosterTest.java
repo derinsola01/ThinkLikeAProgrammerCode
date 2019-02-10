@@ -18,6 +18,8 @@ public class ClassRosterTest {
 		for (ClassRoster remainingStudent : studentList ) 
 			System.out.println("remainingStudent.getStudentName() is: " + remainingStudent.getStudentName());
 		
+		ClassRoster individualStudent = recordWithNumber(studentList, 004 );
+		System.out.println("individualStudent is: " + individualStudent);
 	}
 	
 	public static void addRecord(ArrayList<ClassRoster> studentList, String studentName, String letterGrade, int studentID, int finalGrade ) {
@@ -30,9 +32,16 @@ public class ClassRosterTest {
 		for (ClassRoster studentRecord : studentList ) {
 			if (studentID == studentRecord.getStudentID())
 				studentRecordToBeRemoved = studentRecord;
-			
 		}
 		studentList.remove(studentRecordToBeRemoved);
 	}
-
+	
+	public static ClassRoster recordWithNumber(ArrayList<ClassRoster> studentList, int studentID ) {
+		ClassRoster studentRecordWithNumber = new ClassRoster();
+		for (ClassRoster studentRecord : studentList ) {
+			if (studentID == studentRecord.getStudentID())
+				studentRecordWithNumber = studentRecord;
+		}
+		return studentRecordWithNumber;
+	}
 }
