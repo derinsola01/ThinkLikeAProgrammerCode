@@ -1,7 +1,7 @@
 public class RecursionTest {
 	public static void main(String[] args) {
-		System.out.println("The product of the factorial is: " + factorial(10));
-		System.out.println("The next number in the fibonacci sequence is: " + fibonacci(12));
+		System.out.println("The product of the factorial is: " + factorial(12));
+		System.out.println("The nth term of the fibonacci sequence is: " + fibonacci(12));
 	}
 	
 	public static int factorial (int number) {
