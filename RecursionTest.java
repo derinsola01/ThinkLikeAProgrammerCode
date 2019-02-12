@@ -12,12 +12,11 @@ public class RecursionTest {
 	}
 	
 	public static int fibonacci (int number) {
-		int temp = 0;
 		if (number == 1)
 			return 1;
 		if (number == 2)
 			return fibonacci(1);
 		else
-			return temp += fibonacci(number - 1) + fibonacci(number - 2);		
+			return fibonacci(number - 1) + fibonacci(number - 2);
 	}
 }
