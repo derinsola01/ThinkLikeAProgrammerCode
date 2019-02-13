@@ -11,10 +11,9 @@ public class RecursionArray {
 	
 //	tail recursion
 	public static int arrayAdder(int[] arr, int arrSize) {
-		if (arrSize == 1)
-			return arr[0];
+		if (arrSize == 0)
+			return 0;
 		else
 			return arr[arrSize-1] += arrayAdder(arr, arrSize - 1);
 	}
-
 }
