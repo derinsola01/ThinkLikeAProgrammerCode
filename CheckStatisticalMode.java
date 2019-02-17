@@ -3,11 +3,11 @@ public class CheckStatisticalMode {
 
 	public static void main(String[] args) {
 		int[] numbers = {12, 16, 13, 20, 20, 20, 16, 14, 16, 15, 20, 20, 17, 15, 16, 20};
-		int modeNum = getMode(numbers);
-		System.out.println("modeNum is: " + modeNum);
+		int[] modeNum = getMode(numbers);
+		System.out.println("Mode of the array is: '" + modeNum[1] + "', with '" + modeNum[0] + "' occurences.");
 	}
 	
-	public static int getMode(int[] arr) {
+	public static int[] getMode(int[] arr) {
 		int modeCounter = 0;
 		int elementVal = 0;
 		for (int i = 0; i < arr.length; i++ ) {
@@ -21,6 +21,7 @@ public class CheckStatisticalMode {
 				elementVal = arr[i];
 			}
 		}
-		return elementVal;
+		int[] modePayload = {modeCounter, elementVal};
+		return modePayload;
 	}
 }
