@@ -12,7 +12,7 @@ public class RecursionTest {
 	}
 	
 	public static int fibonacci (int number) {
-		if (number == 1)
+		if (number <= 1)
 			return 1;
 		if (number == 2)
 			return fibonacci(1);
